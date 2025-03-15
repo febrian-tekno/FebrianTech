@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-padding-top: 60px;
+}
+body {
+    background-color: #E8F9FF;
+    font-size: 16px;
+    line-height: 1.75;
+    font-family: 'Roboto', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.jumbotron {
+    font-style: italic;
+    padding: 80px 0;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.5;
+    background: url('../img/banner.jpg') center/cover;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #FFEB00;
+}
+
+h2, h3 {
+    color: #000957;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    width: 100%;
+    background-color: #344CB7;
+    padding: 15px 20px;
+    font-weight: 400;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+nav .menu {
+    display: flex;
+    flex-grow: 2;
+    list-style: none;
+    gap: 5%;
+
+}
+
+nav .login {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 700;
+
+}
+
+nav a:hover {
+    background-color: #FFEB00;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+
+#login-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #344CB7;
+    border: 1px solid #000957;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#login-button:hover {
+    background-color: #FFEB00;
+    color: black;
+}
+
+
+.featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+.diagram, .image-center {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    padding: 10%;
+}
+
+main {
+    display: flex;
+    justify-content: stretch;
+}
+
+.content {
+    width: 70%;
+    padding-left: 10px;
+}
+
+aside {
+    width: 30%;
+    padding: 0 20px;
+}
+
+.profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    border-radius: 5%;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-text, .hero-image {
+    width: 50%;
+}
+
+.hero-image img {
+    border-radius: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #344CB7;
+    font-weight: 600;
+    color: white;
+    margin-top: 20px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    main, .hero {
+        flex-direction: column;
+    }
+
+    .content, aside, .hero-text, .hero-image{
+        width: 100%;
+        padding: 0;
+    }
+    nav {
+        padding: 15px 0;
+    }
+    nav .menu {
+        gap: 1%;
+        justify-content: space-around;
+        font-size: 14px;
+    }
+
+    .jumbotron {
+        font-size: 24px;
+    }
+}
+
+nav .menu .menu-dropdown{
+    position: relative;
+    display: block;
+    font-weight: 700;
+    list-style: none;
+}
+
+nav .menu .menu-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #344CB7;
+    min-width: 150px;
+    z-index: 1;
+}
+
+nav .menu .menu-dropdown a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+nav .menu .menu-dropdown a:hover {
+    background-color: #FFEB00;
+    color: black;
+}
+
+nav .menu .dropdown:hover .menu-dropdown {
+    display: block;
+    margin-top: 5px;
+}
+
+.hubungi-kami table td {
+    padding-left: 20px;
+}
+.media-social {
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.media-social a img {
+    width: 45px;
+}
+.media-social a:hover img {
+    width: 50px;
+}
+
+#names span {
+    display: inline-block;
+    transition: .3s;
+}
+#names span:hover {
+    transform: scale(2) translateY(-20px);
+}

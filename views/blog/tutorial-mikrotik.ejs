@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Mikrotik Lengkap | TKJBISA</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 2px solid black;
+          padding: 30px;
+          transition: .3s;
+          background-color: salmon;
+        }
+        
+        #button {
+          margin-top: 5px;
+          margin-bottom: 15px;
+          
+        }
+        #button:hover {
+            transform: scale(1.3);
+            transition: .2s;
+        }
+        .img {
+          margin-top: 50px;
+        }
+      </style>
+    </head>
+    <body>
+    <div  class="contents" align="center"  >
+      <img src="assets/img/profile.jpg" alt="" width="200px" class="img">
+      <div class="main">
+      <button id="button" ">Tekan Aku :)</button>
+      <h3>Tekan tombol Diatas untuk menuju blog Mikrotik</h3>
+    </div>
+    </div>
+    <div id="content"></div>
+
+
+    <script>
+const content = document.getElementById('content');
+const button = document.getElementById('button');
+const contents = document.querySelector('.contents');
+function printStr() {
+            let text = ''; // Simpan dalam variabel dulu
+            for (let i = 0; i < 1000; i++) {
+                text += `<p style="text-align:center;">BELAJAR SANA KONTOL    BELAJAR SANA KONTOL      BELAJAR SANA KONTOL      BELAJAR SANA KONTOL   BELAJAR SANA KONTOL    BELAJAR SANA KONTOL</p>`;
+            }
+            content.innerHTML = text; // Tetapkan sekali, lebih cepat
+            content.style.color='red';
+            content.style.backgroundColor='black'
+        }
+function hideContents() {
+    contents.hidden=true;
+}
+button.addEventListener('click', hideContents)
+button.addEventListener('click', printStr);
+
+    </script>
+</body>
+</html>

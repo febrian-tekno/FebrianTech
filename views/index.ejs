@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1>in adalah halaman home</h1>
+    <h2>ini adalah output dari database: <%= nama %></h2>
+    <nav>
+      <ul>
+        <li><a href="./febrian-tech">Febrian Tech</a></li>
+        <li><a href="./bookShelf">BookShelf app</a></li>
+        <li><a href="./movie-search">Movie Search database</a></li>
+        <li><a href="./login-page">Login Page</a></li>
+      </ul>
+      <p>testing fetch api to : https://putrafebrian.online/api/user/all</p>
+    </nav>
+    <script>
+      fetch("https://putrafebrian.online/api/user/all", {
+        method: "GET",
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => response.json()) // Mengonversi response menjadi JSON
+        .then((data) => console.log(data)) // Menampilkan data ke console
+        .catch((error) => console.error("Error:", error)); // Menangani error jika ada
+    </script>
+  </body>
+</html>
