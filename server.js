@@ -16,7 +16,10 @@ app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 // gunakan ejs
 app.set("view engine", "ejs");
 
-// simpan file ejs dalam folder views(default)
+// set views path
+app.set('views', path.join(__dirname, 'views'));  // <-- menambahkan ini
+
+// simpan file ejs dalam folder views (default)
 
 app.get("/", (req, res) => {
   res.render("index", {
@@ -51,9 +54,9 @@ app.get("/data/contacts", (req, res) => {
   // mengembaliklan file json
   res.sendFile("./data/user/contacts.json", { root: __dirname });
 });
+
 app.get("/api/user/:name", (req, res) => {
   const user = findContact(req.params.name);
-  findContact("nana");
   // mengembaliklan json data contact spesific
   res.json(user);
 });
@@ -70,7 +73,7 @@ app.get("/product/:id", (req, res) => {
   );
 });
 
-// akan selalu dijalankan dengan request apapun yang taidak terdefinisi atau di route  harus diletakan paling bawh
+// akan selalu dijalankan dengan request apapun yang tidak terdefinisi atau di route harus diletakan paling bawah
 app.use("/assets", express.static(path.join(__dirname, "public", "assets")));
 
 app.use("/", (req, res) => {
@@ -98,4 +101,3 @@ const findContact = (name) => {
     return null;
   }
 };
-findContact("nana");
