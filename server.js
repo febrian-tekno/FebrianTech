@@ -77,9 +77,7 @@ app.use("/", (req, res) => {
   res.status(404).render("error-404");
 });
 
-app.listen(port, () => {
-  console.log(`server webservice running on http://localhost:${port}`);
-});
+module.exports = app;
 
 const findContact = (name) => {
   try {
